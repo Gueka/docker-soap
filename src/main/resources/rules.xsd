@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.gueka.net/demo/schema"
+           targetNamespace="http://www.gueka.net/demo/schema" elementFormDefault="qualified">
+
+    <xs:element name="getRuleValidationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="tns:data"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getRuleValidationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rule" maxOccurs="unbounded" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+  
+    <xs:complexType name="data">
+        <xs:sequence>
+            <xs:element name="userId" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
